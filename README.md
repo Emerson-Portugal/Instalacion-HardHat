@@ -47,6 +47,10 @@ module.exports = {
       url: MATIC_URL,
       accounts: [`0x${PRIVATE_KEY}`],
     },
+    sepolia: {
+      url: SEPOLIA_URL,
+      accounts: [`0x${PRIVATE_KEY}`],
+    },
   },
 };
 
@@ -79,3 +83,19 @@ npx hardhat run .\scripts\deploy.js --network mumbai
 ```
 npx hardhat run .\scripts\deploy.js --network matic
 ```
+
+- Red Polygon Ethereum Sepolia
+```
+npx hardhat run .\scripts\deploy.js --network sepolia
+```
+
+## RECURSOS
+
+- Para optener gas y poder hacer tus transaciones 
+[Faucet-Chain](https://faucets.chain.link/)
+- Para poder usar una URL con Clave privada 
+[Infura](https://app.infura.io/)
+- Para poder ver las Transaciones en la red de Ethereum -> Dedes definir tu red que estas utilizando
+[Etherscan](https://etherscan.io/)
+- Para poder ver las transaciones en la red de Polygon
+[Polygon](https://polygonscan.com/)

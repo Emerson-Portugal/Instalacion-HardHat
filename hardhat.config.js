@@ -4,7 +4,7 @@ require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config(); // Traer la infomacion de .env
 // console.log(process.env) remove this after you've confirmed it is working
 
-const { API_URL, PRIVATE_KEY, MATIC_URL } = process.env;
+const { API_URL, PRIVATE_KEY, MATIC_URL, SEPOLIA_URL } = process.env;
 
 module.exports = {
   solidity: "0.8.18",
@@ -17,6 +17,10 @@ module.exports = {
     // Vamos agregar mas redes
     matic: {
       url: MATIC_URL,
+      accounts: [`0x${PRIVATE_KEY}`],
+    },
+    sepolia: {
+      url: SEPOLIA_URL,
       accounts: [`0x${PRIVATE_KEY}`],
     },
   },
